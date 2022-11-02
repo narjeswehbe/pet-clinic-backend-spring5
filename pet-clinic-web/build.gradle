@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' apply true
+    id 'io.spring.dependency-management'
+}
+
+group 'com.springuru'
+version '0.0.1-SNAPSHOT'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  //  developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation project(':pet-clinic-data')
+
+
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+test {
+    useJUnitPlatform()
+}
