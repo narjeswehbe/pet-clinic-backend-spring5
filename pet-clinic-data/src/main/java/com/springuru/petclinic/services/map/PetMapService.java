@@ -10,7 +10,7 @@ public class PetMapService extends AbstractMapService<Pet,Long> implements PetSe
 
     @Override
     public Set<Pet> findAll() {
-        return this.findAll();
+        return super.findAll();
     }
 
     @Override
